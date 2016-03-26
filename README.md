@@ -1,6 +1,6 @@
 # Programming Challenges
 
-**Note:** Some of the following programming challenges are solutions to [HackerRank](https://www.hackerrank.com) problems.
+**Note:** Some of the following programming challenges are solutions to [HackerRank](https://www.hackerrank.com) and [Testdom](https://www.testdome.com/) problems.
 
 ### Orders
 
