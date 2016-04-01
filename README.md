@@ -31,6 +31,6 @@ The function *sumOfIntegers* returns the sum of **n** integers (PHP).
 Hide and show divs in a DOM by using jQuery.
 
 
-### HTML/CSS - Testdom
+### HTML/CSS
 
-HTML login form, form with HTML5 features, styling link.
+Testdom code challenge and more.
