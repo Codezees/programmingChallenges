@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HTML Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body>
+        <form>
+          <fieldset>
+              <legend>Application Form</legend>
+              First Name: <input name="firstName" type="text" placeholder="Enter your first name" />
+              <br /><br />
+              Last Name: <input name="lastName" type="text" placeholder="Enter your last name" />
+              <br /><br />
+              Email Address: <input name="emailAddress" type="email" placeholder="Enter your e-mail address" />
+          </fieldset><br />
+          <input type="submit" value="Sign in" />
+        </form>
+        <br />
+        <form novalidate="novalidate">
+          <fieldset>
+              <legend>More Details (HTML5)</legend>
+              Color: <input name="pickColor" type="color" />
+              <br /><br />
+              Date: <input name="date" type="date" />
+              <br /><br />
+              Local date/time: <input name="datetime" type="datetime-local" />
+              <br /><br />
+              Month: <input name="month" type="month" />
+              <br /><br />
+              Number: <input name="number" type="number" />
+              <br /><br />
+              Range: <input name="range" type="range" min="1" max="15" />
+              <br /><br />
+              Search: <input name="search" type="search" />
+              <br /><br />
+              Telephon: <input name="tel" type="tel" />
+              <br /><br />
+              Time: <input name="time" type="time" />
+              <br /><br />
+              URL: <input name="url" type="url" />
+              <br /><br />
+              Week: <input name="week" type="week" />
+          </fieldset><br />
+          <fieldset>
+            <legend>Require Admin Approval</legend>
+            Yes: <input type="radio" name="approval" value="true" checked="checked" />
+            <br />
+            No: <input type="radio" name="approval" value="false" />
+        </fieldset><br />
+          <input type="submit" value="Enroll" />
+        </form>
+    </body>
+</html>
