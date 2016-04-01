@@ -1,6 +1,6 @@
 # Programming Challenges
 
-**Note:** Some of the following programming challenges are solutions to [HackerRank](https://www.hackerrank.com) problems.
+**Note:** Some of the following programming challenges are solutions to [HackerRank](https://www.hackerrank.com) and [Testdom](https://www.testdome.com/) problems.
 
 ### Orders
 
@@ -29,3 +29,8 @@ The function *sumOfIntegers* returns the sum of **n** integers (PHP).
 ### Show / Hide text
 
 Hide and show divs in a DOM by using jQuery.
+
+
+### HTML/CSS - Testdom
+
+HTML login form, form with HTML5 features, styling link.
