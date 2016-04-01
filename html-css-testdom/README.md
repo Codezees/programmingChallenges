@@ -1,6 +1,9 @@
 # Testdom Code Challenge
 
->>Take a look of a [demo](https://plnkr.co/edit/ZiSUCqp1RaMeI4UtTILw?p=preview)
+>>[demo](https://plnkr.co/edit/ZiSUCqp1RaMeI4UtTILw?p=preview) for the `index.html`
+
+>>[demo](https://plnkr.co/edit/XPvz00gCLZu2CdY1D5x1?p=preview) for the `form-input-html5.html`
+
 
 ## HTML/CSS
 
