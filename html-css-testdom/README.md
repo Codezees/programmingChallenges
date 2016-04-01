@@ -5,7 +5,7 @@
 >>[demo](https://plnkr.co/edit/XPvz00gCLZu2CdY1D5x1?p=preview) for the `form-input-html5.html`
 
 
-## HTML/CSS
+## HTML/CSS (index.html)
 
 ### Login
 
