@@ -1,6 +1,6 @@
 # Testdom Code Challenge
 
->>Take a look at the Plunker [Demo](https://plnkr.co/edit/ZiSUCqp1RaMeI4UtTILw?p=preview)
+>>Take a look of a [demo](https://plnkr.co/edit/ZiSUCqp1RaMeI4UtTILw?p=preview)
 
 ## HTML/CSS
 
