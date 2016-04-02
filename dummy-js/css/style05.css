@@ -1,0 +1,18 @@
+section {
+    margin: 35px;
+    padding: 35px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Calibri', sans-serif;
+}
+.dark {
+    background-color: #5a0354;
+}
+.normal {
+    background-color: #7a3576;
+}
+.light {
+    background-color: #9c6798;
+}

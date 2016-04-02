@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Music</title>
+        <script src="js/script03.js"></script>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Reggae music</legend>
+                Favorite song: <input type="text" name="song" value="" />
+            </fieldset>
+            <fieldset>
+                <legend>Favorite Singer</legend>
+                Bob Marley: <input type="radio" name="singer" value="Bob Marley" checked="checked" /><br />
+                Peter Tosh: <input type="radio" name="singer" value="Peter Tosh" /><br />
+                Alpha Blondy: <input type="radio" name="singer" value="Alpha Blondy" /><br />
+                Jimmy Cliff: <input type="radio" name="singer" value="Jimmy Cliff" />
+            </fieldset>
+            <button type="button" onclick="saveSong()">Save Song</button>
+            <button type="button" onclick="saveSinger()">Save Singer</button>
+        </form>
+    </body>
+</html>
