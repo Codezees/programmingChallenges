@@ -34,3 +34,8 @@ Hide and show divs in a DOM by using jQuery.
 ### HTML/CSS
 
 Testdom code challenge and more.
+
+
+### Dummy JS
+
+Simple JavaScript examples for practice and quick reference.
