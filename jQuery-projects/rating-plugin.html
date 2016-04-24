@@ -43,7 +43,7 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
  <script>
-       
+  $(function() {        
    var index = -1; // Variable that stores the last index clicked. Default is -1
 
    $('.rating-circle').hover(function() {
@@ -65,7 +65,7 @@
      $(this).prevUntil().addClass('rating-chosen');
      $(this).addClass('rating-chosen');
    });
-       
+  });     
  </script>
 </body>
 </html>
