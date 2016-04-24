@@ -1,0 +1,72 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <style>
+  body {
+   font-family: Verdana;
+  }
+  h1, h2, h3 {
+   color: darkblue;
+  }
+  .rating-circle {
+   height: 2em;
+   width: 2em;
+   border: .1em solid black;
+   border-radius: 1.1em;
+   display: inline-block;
+   margin: 0;
+   padding: .1em;
+  }
+
+  .rating-hover {
+   background-color: yellow;
+  }
+
+  .rating-chosen {
+   background-color: green;
+  }
+ </style>
+</head>
+<body>
+ <h1>Web Developer Conference</h1>
+ <h2>Finding elements using jQuery</h2>
+ <div>This session is about identifying elements using jQuery methods and selectors.</div>
+ <h3>Rate this session</h3>
+ <div id="rating-container">
+  <div class="rating-circle"></div>
+  <div class="rating-circle"></div>
+  <div class="rating-circle"></div>
+  <div class="rating-circle"></div>
+  <div class="rating-circle"></div>
+ </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+ <script>
+       
+   var index = -1; // Variable that stores the last index clicked. Default is -1
+
+   $('.rating-circle').hover(function() {
+     $('.rating-circle').removeClass('rating-chosen');
+     $(this).prevAll().addClass('rating-hover');
+     $(this).addClass('rating-hover');
+   });
+   
+   $('.rating-circle').mouseout(function() {
+     var clicked = $('.rating-circle').get(index + 1); // Get the element clicked before, using the index var
+     $(clicked).prevAll().addClass('rating-chosen');
+     $(this).prevAll().removeClass('rating-hover');
+     $(this).removeClass('rating-hover');
+   });
+
+   $('.rating-circle').click(function() {
+     index = $(this).index(); // Set the new index
+     $('.rating-circle').removeClass('rating-chosen');
+     $(this).prevUntil().addClass('rating-chosen');
+     $(this).addClass('rating-chosen');
+   });
+       
+ </script>
+</body>
+</html>
+
