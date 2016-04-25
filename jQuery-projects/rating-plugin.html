@@ -25,6 +25,10 @@
   .rating-chosen {
    background-color: green;
   }
+  
+  .hidden {
+    display:none;
+  }
  </style>
 </head>
 <body>
@@ -38,12 +42,13 @@
   <div class="rating-circle"></div>
   <div class="rating-circle"></div>
   <div class="rating-circle"></div>
+  <div class="rating-circle hidden"></div>
  </div>
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+ <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
 
  <script>
-  $(function() {        
+  $(function() {   
    var index = -1; // Variable that stores the last index clicked. Default is -1
 
    $('.rating-circle').hover(function() {
@@ -65,8 +70,7 @@
      $(this).prevUntil().addClass('rating-chosen');
      $(this).addClass('rating-chosen');
    });
-  });     
+  });      
  </script>
 </body>
 </html>
-
