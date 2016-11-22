@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Video style */
+#sampleVideo {
+    width: 307px;
+    height: 250px;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid #ccc;
+}
+ 
+#sampleVideo:hover {
+    width:400px;
+    transform:rotate(-5deg);
+}
+
+.blur {
+    filter: blur(3px);
+}
+
+.brightness {
+    filter: brightness(5);
+}
+
+/* Audio style */
+#figaudio {
+    width : 420px;;
+    text-align:center;
+    padding : 6px;
+    background : white;
+    margin : 0 11px 0px 0;
+    border :solid 1px #888888;
+    border-radius : 8px ;
+}
+ 
+#figcptionaudio {
+    font-size : .8em;
+    padding : 6px 8px;
+    background : #dddddd;
+    display :block;
+    text-align :center;
+    font-family : georgia, serif;
+    font-style : italic;
+    border-radius : 7px ;
+}
+ 
+#figaudio > img {
+    background : #eeeeee;
+    padding : 5px;
+    border : solid 1px #444444;
+}
+ 
+/* For audio and img transitions/animation */
+audio, #figaudio > img {
+    transition:all 0.5s;
+}
+ 
+#figaudio > img:hover {
+    box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+    transform: scale(1.05);
+}
+ 
+audio:hover, audio:focus, audio:active {
+    box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+    transform: scale(1.05);
+}
+</style>
+<script>
+var sampleVideo = document.getElementById('sampleVideo');
+var idx = 0;
+var filters = [
+   'grayscale',
+   'sepia',
+   'blur',
+   'brightness',
+   'contrast',
+   'hue-rotate', 'hue-rotate2', 'hue-rotate3',
+   'saturate',
+   'invert'];
+function changeFilter(e) {
+   var el = e.target;
+   var effect = filters[idx++ % filters.length];
+   el.classname = effect;
+   // Do not propagate the event, prevent default behavior.
+   // By default, a click on a video element pauses/unpauses the video
+   // By stopping the propagation and canceling the default behavior,
+   // we stop the pause/unpause behavior when the video is clicked.
+   // Now a click just changes the CSS filter we apply on the video.
+   e.stopPropagation();
+   e.preventDefault();
+}
+sampleVideo.addEventListener('click', changeFilter, false);
+</script>
+</head>
+<body>
+<h1>Video with different sources and track code</h1>
+<video height="272" width="640"
+       poster="http://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg"
+       crossorigin="anonymous"
+       id="sampleVideo" autoplay controls>
+   <source src="http://demo.jwplayer.com/html5-report/sintel.mp4"
+           type="video/mp4">
+   <source src="http://demo.jwplayer.com/html5-report/sintel.webm"
+           type="video/webm">
+   <track kind="subtitles" src="brave.en.vtt"
+          srclang="en"
+          label="English"
+          default>
+   <track kind="captions" src="brave.en.hoh.vtt"
+          srclang="en"
+          label="English for the Hard of Hearing">
+   <track kind=subtitles src="brave.fr.vtt"
+          srclang=fr
+          lang=fr 
+          label="Français">
+   <track kind=subtitles src="brave.de.vtt"
+          srclang=de
+          lang=de
+          label="Deutsch">
+</video>
+<br /><br />
+<h1>Audio file with an image</h1>
+<figure id="figaudio">
+  <img id="imghorse" width="200"
+     src="http://upload.wikimedia.org/wikipedia/commons/d/d4/Nokota_Horses.jpg"
+     alt = "a horse"/>
+  <figcaption id="figcptionaudio"> Press Play to hear the horse!
+    <audio controls="controls">
+       <source src="https://dl.dropboxusercontent.com/u/1631516/horse.ogg"
+               type="audio/ogg" />
+       <source src="https://dl.dropboxusercontent.com/u/1631516/horse.mp3"
+               type="audio/mp3" />
+       Your browser does not support the audio element.
+       Download the audio/video in
+       <a href='https://dl.dropboxusercontent.com/u/1631516/horse.ogg'>OGG</a>
+     or <a href='https://dl.dropboxusercontent.com/u/1631516/horse.mp3'>MP3</a>
+        format.
+   </audio>
+</figcaption>
+</figure>
+</body>
+</html>
