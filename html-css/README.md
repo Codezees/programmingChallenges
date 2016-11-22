@@ -10,6 +10,8 @@
 
 >>[demo](https://plnkr.co/edit/FtbnLAOh6FZkM7EL2RC1?p=preview) for the `html5-graphics.html`
 
+>>[demo](https://plnkr.co/edit/ZCrShDVl6W4l8L6gnQio?p=preview) for the `html5-localstorage.html`
+
 
 ## Testdom Code Challenge (index.html)
 
