@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <style>
+     #myCanvas {
+         border: 1px solid black;
+     }
+ </style>
+<script>
+   var canvas, ctx;
+ 
+   function init() {
+     // This function is called after the page is loaded
+     // Get the canvas
+     canvas = document.getElementById('myCanvas');
+     //  Get the context
+     ctx=canvas.getContext('2d');
+     
+     // Use the global settings
+     useGlobal();
+     
+     // save the context before setting shadows and drawing the text
+     ctx.save();
+     
+     // TEXT
+     // Change position, rotate, scale
+     ctx.translate(150,-15);
+     ctx.rotate(Math.PI/5);
+     ctx.scale(1.2, 1.2);
+     // Write something
+     writeSomething();
+     
+     // Restore the context to its previous saved state
+     ctx.restore();
+     ctx.save();
+     
+     // Call to a function that will set the 4 context properties for shadows
+     addShadows();
+     
+     // Draw something and fill with color
+     fillElements(10, 10);
+     
+     ctx.restore();
+     
+     // Stroke the previous elements
+     strokeElements(10, 10);
+   }
+   
+   function useGlobal() {
+    // set the global context values
+    ctx.lineWidth=1.5;
+    ctx.fillStyle='pink';
+    ctx.strokeStyle='black'
+    // font for all text drawing
+    ctx.font = 'italic 20pt Calibri';
+   }
+   
+   function fillElements(x, y) {
+     // draw rectangles
+     ctx.fillRect(x, y,100,100);
+     ctx.clearRect(x+40, y+40, 20, 20);
+
+     ctx.fillRect(x+140,y,100,100);
+     ctx.clearRect(x+180, y+40, 20, 20);
+   }
+   
+   function strokeElements(x, y) {
+     ctx.strokeRect(x, y,100,100);
+     ctx.strokeRect(x+140,y,100,100);
+   }
+   
+   function writeSomething() {
+     // Draw a message below the rectangles
+    // ctx.strokeRect("drawing rectangles", 10, 150);
+     ctx.fillText("drawing rectangles", 10, 150);
+     ctx.strokeText("drawing rectangles", 10, 150);
+   }
+   
+   // We define the 4 properties in a dedicated function, for clarity
+  function addShadows() {
+      ctx.shadowColor = "Grey";    // color
+      ctx.shadowBlur = 10;         // blur level
+      ctx.shadowOffsetX = 5;      // horizontal offset
+      ctx.shadowOffsetY = 5;      // vertical offset
+  }
+  
+</script>
+</head>
+<body onload="init();">
+  <canvas id="myCanvas" width="300" height="300">
+          Your browser does not support the canvas tag.
+  </canvas>
+
+</body>
+</html>
