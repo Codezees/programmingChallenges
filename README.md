@@ -6,6 +6,10 @@
 
 You are given the table *orders*. Return the *customerNumber* for the customer (or customers) that has placed the largest number of the orders.
 
+### Memory game
+
+A memory card game written in JS by using Asynchronous Programming concepts.
+
 ### Second largest
 
 Finding the second highest number in array (JavaScript).
